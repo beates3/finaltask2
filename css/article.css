@@ -26,3 +26,19 @@ img.img{
     margin-right: 80px;
 
 }
+#comment-box, #post {
+    border: black;
+    border-radius: 5px;
+}
+#post:hover{
+    background-color: deeppink;
+}
+ul.chat {
+    border: 1px solid black;
+    background-color: papayawhip;
+    background-image: url(https://uploads.metamorphosis.com/wp-content/uploads/sites/2/2021/04/white-dog-names-1.jpg);
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    }
+

@@ -30,15 +30,59 @@ function checkPassword(){
 
   var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
 triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new bootstrap.Tab(triggerEl)
+ var tabTrigger = new bootstrap.Tab(triggerEl)
 
-  triggerEl.addEventListener('click', function (event) {
+triggerEl.addEventListener('click', function (event) {
     event.preventDefault()
-    tabTrigger.show()
+   tabTrigger.show()
   })
 })
 var triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show()
-
+/bootstrap.Tab.getInstance(triggerEl).show()
 }
-  
+
+
+    document
+    .getElementById('add-new-task')
+    .addEventListener('click', function() {
+        const unameInput = document.getElementById('uname');
+        unameInput.classList.remove('border')
+        unameInput.classList.remove('border')
+
+        if (unameInput.value == '') {
+          unameInput.classList.add('border')
+          unameInput.classList.add('border')
+            return false;
+        }
+        const newTask = `<li class="list-group-item">User: 
+        ${unameInput.value}</li>`;
+
+        document
+            .getElementById('tasks-list')
+            .innerHTML += newTask;
+
+            unameInput.value = '';
+    });
+
+document
+    .getElementById('add-new-task')
+    .addEventListener('click', function() {
+        const taskInput = document.getElementById('todo-name');
+        taskInput.classList.remove('border')
+        taskInput.classList.remove('border')
+
+        if (taskInput.value == '') {
+            taskInput.classList.add('border')
+            taskInput.classList.add('border')
+            return false;
+        }
+        const newTask = `<li class="list-group-item"> Message: <br></br>
+        ${taskInput.value}</li>`;
+
+        document
+            .getElementById('tasks-list')
+            .innerHTML += newTask;
+
+        taskInput.value = '';
+    });
+

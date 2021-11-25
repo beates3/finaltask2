@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>
+<header>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -32,8 +33,42 @@
           <li class="breadcrumb-item active" aria-current="page">Chat</li>
         </ol>
       </nav>
-
+    
+<main>
+ <h4>Chat</h4>
+ <div class="container pt-5">
+  <div class="row">
+      <div class="col">
+          <h1>Amazing Chat</h1>
+          <br>
+      </br>
+          <ul class="chat list-group" id="tasks-list">
+              <li class="list-group-item">Hi Everyone!</li>
+              
+            </ul>
+      </div>
+  </div>
+  <div class="row pt-5 g-2">
+      <div class="col-sm-6">  
+   <h5>Contact Picasso here:</h5>
+       
+      <div class="input-group ">
+        <input type="text" class="form-control col-4" placeholder="Username" aria-label="Username" id="uname">
+        </div>
+      <p></p>
+      <div class="form-floating">
+          <textarea type="text" class="form-control" id="todo-name" style="height: 100px" > </textarea>
+          <label for="todo-name">Your message:</label>
+        </div>
+          <button class="btn btn-warning mt-3" id="add-new-task" style="float: right;">Send</button>
+      </div>
+  </div>
 </div>
+
+<script src="js/main.js"></script>
+</main>
+     
+
 
       <div id="footer" class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -53,6 +88,7 @@
         </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
 
  </body>
  </html>
