@@ -1,4 +1,4 @@
-
+//bootstrap validattion
 (function () {
     'use strict'
   
@@ -35,35 +35,32 @@ triggerEl.addEventListener('click', function (event) {
 
   
 
-    
+//chat    
 
 document
-    .getElementById('add-new-task')
+    .getElementById('add-new-chat')
     .addEventListener('click', function() {
         const unameInput = document.getElementById('uname');
-        const taskInput = document.getElementById('todo-name');
+        const messageInput = document.getElementById('message-name');
         const today = new Date();
-
-       const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
-       const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-       const dateTime = date+' '+time;
+        const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        const dateTime = date+' '+time;
         
         
-        if (taskInput.value == '' || unameInput.value == '' ) {
-       
+        if (messageInput.value == '' || unameInput.value == '' ) {
+            
             return false;
         }
-        const newTask = `<li class="list-group-item">User: 
+        const newMessage = `<li class="list-group-item">User: 
         ${unameInput.value} ${dateTime} </li><li class="list-group-item"> Message: <br></br>
-        ${taskInput.value}</li>`;
+        ${messageInput.value}</li>`;
 
         document
-            .getElementById('tasks-list')
-            .innerHTML += newTask;
+            .getElementById('message-list')
+            .innerHTML += newMessage;
 
-        taskInput.value = '';
+        messageInput.value = '';
         unameInput.value = '';
         
     });
