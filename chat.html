@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>
-<header>
-  <div class="container">
+
+  <div class="container sticky-top" style="background-color: white;">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <a  class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <span class="fs-4">Pablo Picasso</span>
       </a>
 
@@ -35,15 +34,14 @@
       </nav>
     
 <main>
- <h4>Chat</h4>
  <div class="container pt-5">
   <div class="row">
       <div class="col">
           <h1>Amazing Chat</h1>
           <br>
       </br>
-          <ul class="chat list-group" id="tasks-list">
-              <li class="list-group-item">Hi Everyone!</li>
+          <ul class="chat list-group list-group-flush" id="tasks-list">
+             
               
             </ul>
       </div>
@@ -56,7 +54,7 @@
         <input type="text" class="form-control col-4" placeholder="Username" aria-label="Username" id="uname">
         </div>
       <p></p>
-      <div class="form-floating">
+      <div class="form-floating ">
           <textarea type="text" class="form-control" id="todo-name" style="height: 100px" > </textarea>
           <label for="todo-name">Your message:</label>
         </div>

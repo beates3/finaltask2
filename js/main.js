@@ -1,12 +1,10 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+
 (function () {
     'use strict'
   
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+
     var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
+     Array.prototype.slice.call(forms)
       .forEach(function (form) {
         form.addEventListener('submit', function (event) {
           if (!form.checkValidity()) {
@@ -21,12 +19,7 @@
 
 
 
-function checkPassword(){
-  let password = document.getElementById('Password').value;
-  let confirmpassword = document.getElementById('ConfirmPassword').value;
-  if (password != confirmpassword){
-    alert("Password did not match")
-  }
+
 
   var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
 triggerTabList.forEach(function (triggerEl) {
@@ -37,46 +30,33 @@ triggerEl.addEventListener('click', function (event) {
    tabTrigger.show()
   })
 })
-var triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
-/bootstrap.Tab.getInstance(triggerEl).show()
-}
 
 
-    document
-    .getElementById('add-new-task')
-    .addEventListener('click', function() {
-        const unameInput = document.getElementById('uname');
-        unameInput.classList.remove('border')
-        unameInput.classList.remove('border')
 
-        if (unameInput.value == '') {
-          unameInput.classList.add('border')
-          unameInput.classList.add('border')
-            return false;
-        }
-        const newTask = `<li class="list-group-item">User: 
-        ${unameInput.value}</li>`;
+  
 
-        document
-            .getElementById('tasks-list')
-            .innerHTML += newTask;
-
-            unameInput.value = '';
-    });
+    
 
 document
     .getElementById('add-new-task')
     .addEventListener('click', function() {
+        const unameInput = document.getElementById('uname');
         const taskInput = document.getElementById('todo-name');
-        taskInput.classList.remove('border')
-        taskInput.classList.remove('border')
+        const today = new Date();
 
-        if (taskInput.value == '') {
-            taskInput.classList.add('border')
-            taskInput.classList.add('border')
+       const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+       const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+       const dateTime = date+' '+time;
+        
+        
+        if (taskInput.value == '' || unameInput.value == '' ) {
+       
             return false;
         }
-        const newTask = `<li class="list-group-item"> Message: <br></br>
+        const newTask = `<li class="list-group-item">User: 
+        ${unameInput.value} ${dateTime} </li><li class="list-group-item"> Message: <br></br>
         ${taskInput.value}</li>`;
 
         document
@@ -84,5 +64,7 @@ document
             .innerHTML += newTask;
 
         taskInput.value = '';
+        unameInput.value = '';
+        
     });
 

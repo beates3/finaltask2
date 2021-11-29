@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="css/article.css">
 </head>
 <body>
-<header>
- <div class="container">
+
+ <div class="container sticky-top" style="background-color: white;">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <a  class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <span class="fs-4">Pablo Picasso</span>
       </a>
 
@@ -35,11 +34,11 @@
       </nav>
 
       <h4 class="mb-3">Register</h4>
-      <form class="needs-validation" novalidate >
+      <form class="needs-validation" novalidate oninput='ConfirmPassword.setCustomValidity(ConfirmPassword.value != Password.value ? "Passwords do not match." : "")'>
         
           <div class="col-sm-6">
             <label for="firstName" class="form-label">First name*</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            <input type="text" class="form-control" id="firstName"  value="" required>
             <div class="invalid-feedback">
               Your first name is required.
             </div>
@@ -47,14 +46,14 @@
 
           <div class="col-sm-6">
             <label for="lastName" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" >
+            <input type="text" class="form-control" id="lastName" value="" >
         
           </div>
 
           <div class="col-sm-6">
             <label for="username" class="form-label"><Username>Username*</Username></label>
             <div class="input-group has-validation">
-              <input type="text" class="form-control" id="username" placeholder="" required>
+              <input type="text" class="form-control" id="username"  required>
             <div class="invalid-feedback">
                 Your username is required.
               </div>
@@ -63,7 +62,7 @@
 
           <div class="col-sm-6">
             <label for="password" class="form-label">Password*</label>
-            <input type="password" class="form-control" id="Password" placeholder="" required >
+            <input type="password" class="form-control" id="Password" pattern=".{8,}" name="Password" required>
             <div class="invalid-feedback">
               Please enter a valid password(minimum 8 characters long).
             </div>
@@ -71,7 +70,7 @@
 
           <div class="col-sm-6">
             <label for="password" class="form-label">Retype Password*</label>
-            <input type="password" class="form-control" id="ConfirmPassword" placeholder="" required>
+            <input type="password" class="form-control" id="ConfirmPassword" pattern=".{8,}" name="ConfirmPassword" required>
             <div class="invalid-feedback">
               Please enter a valid password(minimum 8 characters long).
             </div>
