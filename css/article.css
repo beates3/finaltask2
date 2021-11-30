@@ -35,10 +35,11 @@ img.img{
 }
 ul.chat {
     border: 1px solid black;
-    
+    font-style: italic;
     
     min-height: 300px;
     max-height: 300px;
     overflow-y: scroll;
+    font-size: medium;
     }
 

@@ -21,17 +21,6 @@
 
 
 
-  var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
-triggerTabList.forEach(function (triggerEl) {
- var tabTrigger = new bootstrap.Tab(triggerEl)
-
-triggerEl.addEventListener('click', function (event) {
-    event.preventDefault()
-   tabTrigger.show()
-  })
-})
-
-
 
   
 
@@ -52,8 +41,8 @@ document
             
             return false;
         }
-        const newMessage = `<li class="list-group-item">User: 
-        ${unameInput.value} ${dateTime} </li><li class="list-group-item"> Message: <br></br>
+        const newMessage = `<li class="list-group-item"> 
+        ${unameInput.value} ${dateTime} <br></br>
         ${messageInput.value}</li>`;
 
         document
@@ -65,3 +54,4 @@ document
         
     });
 
+   
